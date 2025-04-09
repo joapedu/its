@@ -1,0 +1,69 @@
+feedback_types:
+
+  - name: "autonomia"
+    description: "Incentiva os aprendizes a assumirem o controle de seu aprendizado explorando tópicos de forma independente ou definindo seus próprios objetivos."
+    message: "Você está fazendo um progresso constante em {item}. Considere explorá-lo mais a fundo por conta própria para aprofundar seu entendimento."
+
+  - name: "competência"
+    description: "Afirma a capacidade do aprendiz de dominar o material, destacando progresso e pontos fortes."
+    message: "Você está demonstrando grande competência em {item}! Continue com o excelente trabalho."
+
+  - name: "relacionamento"
+    description: "Faz o aprendiz se sentir conectado e apoiado, normalizando dificuldades e sugerindo colaboração."
+    message: "Muitos estudantes acham {item} desafiador. Você não está sozinho—vamos enfrentar isso juntos."
+
+  - name: "urgente"
+    description: "Indica a necessidade de atenção imediata a conceitos básicos devido a dificuldades com perguntas fáceis."
+    message: "Urgente: Você teve dificuldades com perguntas fáceis em {item}. Vamos revisar os fundamentos para construir uma base mais sólida."
+
+  - name: "revisão"
+    description: "Sugere revisitar o tópico para fortalecer o entendimento, especialmente para conceitos mais desafiadores."
+    message: "Considere revisar {item}, especialmente os conceitos mais difíceis, para melhorar sua maestria."
+
+  - name: "exploração"
+    description: "Incentiva os aprendizes a explorar tópicos avançados após dominar os fundamentos."
+    message: "Ótimo trabalho dominando {item}! Considere explorar tópicos avançados para se desafiar ainda mais."
+
+
+feedback_rules:
+
+  - name: "Relacionamento para baixo desempenho em tópicos"
+    condition:
+      type: "less_than"
+      left: "performance.topics[topic].percent_correct"
+      right: 50.0
+    action:
+      feedback_relacionamento[topic]: 1
+    description: "Sinaliza feedback de relacionamento se o desempenho no tópico for inferior a 50%"
+
+  - name: "Competência para alto desempenho em tópicos"
+    condition:
+      type: "greater_than"
+      left: "performance.topics[topic].percent_correct"
+      right: 80.0
+    action:
+      feedback_competência[topic]: 1
+    description: "Sinaliza feedback de competência se o desempenho no tópico exceder 80%"
+
+  - name: "Autonomia para desempenho moderado em tópicos"
+    condition:
+      type: "and"
+      conditions:
+        - type: "greater_than_or_equal"
+          left: "performance.topics[topic].percent_correct"
+          right: 50.0
+        - type: "less_than_or_equal"
+          left: "performance.topics[topic].percent_correct"
+          right: 80.0
+    action:
+      feedback_autonomia[topic]: 1
+    description: "Sinaliza feedback de autonomia se o desempenho no tópico estiver entre 50% e 80%"
+
+  - name: "Exploração para alto desempenho em tópicos"
+    condition:
+      type: "greater_than"
+      left: "performance.topics[topic].percent_correct"
+      right: 90.0
+    action:
+      feedback_exploração[topic]: 1
+    description: "Sinaliza feedback de exploração se o desempenho no tópico exceder 90%"

@@ -1,0 +1,72 @@
+Computação:
+  Programação:
+    Fundamentos:
+      - Algoritmos
+      - Estruturas de Controle (If, Else, Loops)
+      - Funções e Procedimentos
+    Estruturas de Dados:
+      - Arrays e Listas
+      - Pilhas e Filas
+      - Árvores e Grafos
+    Paradigmas de Programação:
+      - Programação Orientada a Objetos
+      - Programação Funcional
+      - Programação Concorrente
+    Linguagens de Programação:
+      - Python
+      - Java
+      - C++
+      - JavaScript
+  Sistemas Operacionais:
+    Conceitos Básicos:
+      - Gerenciamento de Processos
+      - Gerenciamento de Memória
+      - Sistemas de Arquivos
+    Virtualização:
+      - Máquinas Virtuais
+      - Containers (Docker, Kubernetes)
+    Redes e Segurança:
+      - Protocolos de Comunicação (TCP/IP, HTTP)
+      - Segurança de Redes
+      - Criptografia
+  Banco de Dados:
+    Modelagem de Dados:
+      - Modelos Relacionais
+      - Modelos Não Relacionais (NoSQL)
+    Linguagens de Consulta:
+      - SQL
+      - Linguagem de Consulta MongoDB
+    Administração de Banco de Dados:
+      - Backup e Recuperação
+      - Otimização de Consultas
+  Inteligência Artificial:
+    Aprendizado de Máquina:
+      - Supervisionado
+      - Não Supervisionado
+      - Redes Neurais
+    Processamento de Linguagem Natural:
+      - Análise de Sentimentos
+      - Tradução Automática
+    Visão Computacional:
+      - Reconhecimento de Imagens
+      - Detecção de Objetos
+  Desenvolvimento Web:
+    Frontend:
+      - HTML e CSS
+      - JavaScript e Frameworks (React, Angular)
+    Backend:
+      - APIs REST
+      - Frameworks (Django, Node.js)
+    DevOps:
+      - Integração Contínua
+      - Deploy Automatizado
+  Engenharia de Software:
+    Metodologias:
+      - Ágil (Scrum, Kanban)
+      - Cascata
+    Qualidade de Software:
+      - Testes Unitários
+      - Testes de Integração
+    Arquitetura de Software:
+      - Padrões de Projeto
+      - Microsserviços

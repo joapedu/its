@@ -1,0 +1,76 @@
+learner:
+  description: "Esquema para o perfil e dados de desempenho de um único aprendiz"
+  type: dict
+  properties:
+    id:
+      type: string
+      description: "Identificador único para o aprendiz (ex.: UUID ou ID incremental)"
+      example: "aprendiz_001"
+    answers:
+      type: dict
+      description: "Respostas do aprendiz às perguntas (chave: ID da pergunta, valor: A/B/C/D/E)"
+      example: { "1": "A", "2": "B", "3": "C" }
+    performance:
+      type: dict
+      description: "Métricas de desempenho por tópico e área"
+      properties:
+        topics:
+          type: dict
+          description: "Métricas para cada tópico detalhado do domain.yml"
+          value:
+            type: dict
+            properties:
+              total_questions:
+                type: int
+                description: "Número de perguntas respondidas para este tópico"
+                min: 0
+              percent_correct_easy_questions:
+                type: float
+                description: "Porcentagem de respostas corretas para perguntas fáceis neste tópico"
+                range: [0.0, 100.0]
+              percent_correct_medium_questions:
+                type: float
+                description: "Porcentagem de respostas corretas para perguntas médias neste tópico"
+                range: [0.0, 100.0]
+              percent_correct_hard_questions:
+                type: float
+                description: "Porcentagem de respostas corretas para perguntas difíceis neste tópico"
+                range: [0.0, 100.0]
+              percent_correct:
+                type: float
+                description: "Porcentagem geral de respostas corretas neste tópico"
+                range: [0.0, 100.0]
+              points:
+                type: int
+                description: "Total de pontos obtidos neste tópico"
+                min: 0
+        areas:
+          type: dict
+          description: "Métricas para cada área principal (ex.: Programação, Sistemas Operacionais)"
+          value:
+            type: dict
+            properties:
+              total_questions:
+                type: int
+                description: "Número de perguntas respondidas nesta área"
+                min: 0
+              percent_correct_easy_questions:
+                type: float
+                description: "Porcentagem de respostas corretas para perguntas fáceis nesta área"
+                range: [0.0, 100.0]
+              percent_correct_medium_questions:
+                type: float
+                description: "Porcentagem de respostas corretas para perguntas médias nesta área"
+                range: [0.0, 100.0]
+              percent_correct_hard_questions:
+                type: float
+                description: "Porcentagem de respostas corretas para perguntas difíceis nesta área"
+                range: [0.0, 100.0]
+              percent_correct:
+                type: float
+                description: "Porcentagem geral de respostas corretas nesta área"
+                range: [0.0, 100.0]
+              points:
+                type: int
+                description: "Total de pontos obtidos nesta área"
+                min: 0
