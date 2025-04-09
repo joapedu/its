@@ -1,8 +1,6 @@
-# 📚 `models/`: Projetando Seu Sistema Tutor Inteligente (ITS)
+# 📚 `models/`: Sistema Tutor Inteligente (ITS)
 
-Bem-vindo(a) à pasta **model**! 🌟 Este é o coração do seu Sistema Tutor Inteligente (ITS), onde você encontrará três arquivos YAML chave: `domain.yml`, `learner.yml` e `pedagogy.yml`. Esses arquivos trabalham juntos como uma equipe 🤝 para definir o que o ITS ensina, como ele acompanha os alunos e como os ajuda a ter sucesso.
-
-Seja construindo um ITS para preparação para exames como o ENEM, aprendizado de idiomas ou algo totalmente único, este guia mostrará como planejar esses modelos passo a passo. Vamos começar! 🚀
+Bem-vindo(a) à pasta **model**! 🌟 Este é o coração do Sistema Tutor Inteligente (ITS), onde você encontrará três arquivos YAML chave: `domain.yml`, `learner.yml` e `pedagogy.yml`. Esses arquivos trabalham juntos como uma equipe 🤝 para definir o que o ITS ensina, como ele acompanha os alunos e como os ajuda a ter sucesso.
 
 ---
 
