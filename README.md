@@ -6,7 +6,7 @@ Um ITS é formado por três componentes principais:
 
 - Um modelo de domínio que define a estrutura de tópicos e áreas do seu conteúdo.
 - Um modelo pedagógico que define as regras de feedback do ITS.
-- Um modelo de aluno que define em variáveis sobre o processo de aprendizagem do aluno diante das questões do ENEM.
+- Um modelo de aluno que define em variáveis sobre o processo de aprendizagem do aluno diante das questões de computação.
 
 ## 📚 Mais sobre o exemplo do ITS
 
@@ -21,5 +21,5 @@ Um ITS é formado por três componentes principais:
 - **Saidas**: Receba um relatório pedagogicamente significativo com tópicos e áreas para focar nos seus estudos para futuros exames.
 
 ## 🏃 Como Executar o Código?
-2.  Após clonado, **configure**: `pip install -r requirements.txt`
+2.  Após clonado e criado o ambiente virtual python, **configure**: `pip install -r requirements.txt`
 3.  **Execute!**: Você pode utilizar o ITS abrindo o `its-enem.ipynb` e executando as células do notebook. Tente mudar o seu gabarito para ver como o ITS se comporta com diferentes respostas.
